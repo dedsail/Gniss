@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир Аутерии | Эпирион</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="body-background">
+    <header class="header-custom-hood">
+              <!-- Навигационная панель -->
+	    <nav class="nav-container">
+	    
+		<a href="hmpage.html" class="nav-item home-icon" data-target="home">
+		    <i class='bx bx-home-alt'></i>
+		</a>
+		
+		<a href="world.html" class="nav-item active" data-target="world">
+		    <span>Мир</span>
+		</a>
+		<a href="faction.html" class="nav-item" data-target="factions">
+		    <span>Фракции</span>
+		</a>
+		<a href="tech.html" class="nav-item" data-target="magic-tech">
+		    <span>Магия и технологии</span>
+		</a>
+		<a href="cosmology.html" class="nav-item" data-target="cosmology">
+		    <span>Космология</span>
+		</a>
+		<a href="tech.html" class="nav-item" data-target="other">
+		    <span>Прочее</span>
+		</a>
+	    </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h1 class="page-title">Материк Аутерия</h1>
+            <div class="intro-text">
+                <p>Аутерия — величайший материк мира Гнисс, земля бескрайних возможностей, древних тайн и непрекращающихся конфликтов. Здесь переплетаются судьбы королевств, героев и богов.</p>
+            </div>
+
+            <div class="kingdom-highlight">
+                <h2>Королевство Астмус</h2>
+                <p>Основанное в честь бога огня <strong>Астиуса</strong>, это королевство известно своей воинской культурой и несгибаемой волей. Правящая династия <strong>Нисгвильд</strong>, чья кровь течет в жилах короля Давида, ведет свое начало от легендарных героев Эпохи Раздора.</p>
+                
+                <div class="key-figures">
+                    <h3>Ключевые символы Астмуса:</h3>
+                    <ul>
+                        <li><strong>Правящий дом:</strong> Династия Нисгвильд</li>
+                        <li><strong>Государственная религия:</strong> Культа Астиуса, бога огня и порядка</li>
+                        <li><strong>Столица:</strong> Игнис-Кроу, Город-Кузня</li>
+                        <li><strong>Главный ресурс:</strong> Вулканическая сталь и руда из горных шахт</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Временная шкала -->
+            <h2 style="text-align: center; margin-top: 3rem;">Хронология Событий</h2>
+            <div class="timeline" id="mainTimeline">
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content" onclick="openModal('modal1')">
+                        <div class="date">12 лет назад</div>
+                        <h3>Кровавый банкет</h3>
+                        <p>Во время празднования совершеннолетия наследного принца происходит вероломное нападение...</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content" onclick="openModal('modal2')">
+                        <div class="date">12-2 года назад</div>
+                        <h3>Гражданская война</h3>
+                        <p>Восстание, спровоцированное королевством Вудос, перерастает в полномасштабную войну...</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content" onclick="openModal('modal3')">
+                        <div class="date">2 года назад</div>
+                        <h3>Конец войны</h3>
+                        <p>После десяти лет кровопролития королю Давиду удается одержать победу...</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-content" onclick="openModal('modal4')">
+                        <div class="date">Настоящее время</div>
+                        <h3>Новая эра</h3>
+                        <p>События первой сессии разворачиваются в период хрупкого мира и восстановления...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальные окна для временной шкалы -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
+            <h2 class="modal-title">Кровавый банкет</h2>
+            <p><strong>12 лет назад</strong></p>
+            <p>Во время пышного банкета в честь совершеннолетия наследного принца заговорщики, подстрекаемые королевством Вудос, совершают вероломное нападение прямо в королевском зале.</p>
+            <p>Наследный принц героически погибает, защищая свою семью и дворян. Король Давид теряет руку в яростной схватке, а принцесса Дерия таинственным образом исчезает с места побоища, оставив после себя лишь пятна крови.</p>
+            <p>Этот день навсегда останется в памяти жителей Астмуса как "Ночь Алых Лент".</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
+            <h2 class="modal-title">Десятилетие Огня и Крови</h2>
+            <p><strong>12-2 года назад</strong></p>
+            <p>Восстание, начавшееся с банкета, перерастает в полномасштабную гражданскую войну. Королевство Вудос, до этого считавшееся мелким и незначительным, выходит из тени и атакует Астмус с неожиданной силой.</p>
+            <p>Несмотря на превосходство в численности, армия Вудоса страдает от внутренних раздоров и действий шпионов Астмуса. Король Давид лично возглавляет войска, объезжая фронты и вдохновляя солдат.</p>
+            <p>Именно в этот период на полях сражений появляется загадочный воин по имени Лир, чье лицо всегда скрыто, а тактика и отвага становятся легендарными.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal3')">&times;</span>
+            <h2 class="modal-title">Победа и Цена</h2>
+            <p><strong>2 года назад</strong></p>
+            <p>После десяти лет изнурительной войны королю Давиду удается одержать решающую победу. Благодаря сочетанию военного гения, помощи храма Астиуса и героизма таких фигур как Безымянный Воин, угроза со стороны Вудоса окончательно устранена.</p>
+            <p>Цена победы оказалась страшной: тысячи погибших, разрушенные города, пропавшая принцесса и погибший наследник. В награду за невероятные заслуги, Безымянный Воин (Лир) получает титул герцога и земли, чтобы восстановить угасший знатный род.</p>
+            <p>Королевство начинает долгий и трудный процесс восстановления.</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal4')">&times;</span>
+            <h2 class="modal-title">Хрупкий мир</h2>
+            <p><strong>Настоящее время</strong></p>
+            <p>Прошло два года с момента окончания войны. Королевство Астмус медленно залечивает раны, но под поверхностью кипят старые и новые конфликты.</p>
+            <p>Храм Астиуса укрепляет свое влияние, знать делит власть, а загадочный герцог д'Айвингард управляет своими землями, никогда не показывая лица.</p>
+            <p>Именно в этот период хрупкого равновесия и начинаются события нашей истории. Игроки окажутся в эпицентре интриг, которые могут либо спасти королевство, либо окончательно разорвать его на части.</p>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Карта сайта</a>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://dnd.su" class="social-link cosmic-glow" target="_blank">
+                    <i class='bx bx-world'></i>
+                    dnd.su
+                </a>
+                <a href="https://discord.gg/your-server" class="social-link cosmic-glow" target="_blank">
+                    <i class='bx bxl-discord-alt'></i>
+                    Discord
+                </a>
+                <a href="#" class="social-link cosmic-glow">
+                    <i class='bx bxl-vk'></i>
+                    VK
+                </a>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2024 Эпирион. Все права защищены.</p>
+                <p>Мир создан для настольной ролевой игры Dungeons & Dragons</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир Эпириона</title>
+    <link rel="stylesheet" href="css/world.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Космический фон -->
+    <div class="cosmic-background">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="cosmic-overlay"></div>
+    </div>
+
+     <!-- Навигационная панель -->
+    <nav class="nav-container">
+    
+        <a href="hmpage.html" class="nav-item home-icon" title="Home">
+            <i class='bx bx-home-alt'></i>
+        </a>
+        
+        <a href="world.html" class="nav-item" data-target="world">
+            <span>Мир</span>
+        </a>
+        <a href="faction.html" class="nav-item" data-target="factions">
+            <span>Фракции</span>
+        </a>
+        <a href="tech.html" class="nav-item" data-target="magic-tech">
+            <span>Магия и технологии</span>
+        </a>
+        <a href="cosmology.html" class="nav-item" data-target="cosmology">
+            <span>Космология</span>
+        </a>
+        <a href="tech.html" class="nav-item" data-target="other">
+            <span>Прочее</span>
+        </a>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <!-- Герой-секция -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">ЭПИРИОН</h1>
+                <p class="hero-subtitle">Мир, где древняя магия встречается с космическими технологиями</p>
+                <button class="explore-btn cosmic-glow">
+                    <span class="btn-text">Исследовать мир</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section class="gallery-section">
+            <div class="gallery-main">
+                <div class="gallery-image active">
+                    <div class="image-placeholder cosmic-bg">
+                        <i class='bx bx-image-alt'></i>
+                        <span>Континент Аэтерия</span>
+                    </div>
+                    <div class="image-caption">
+                        <h3>Континент Аэтерия</h3>
+                        <p>Древняя земля, где зародились первые цивилизации</p>
+                    </div>
+                </div>
+                <div class="gallery-image">
+                    <div class="image-placeholder cosmic-bg">
+                        <i class='bx bx-image-alt'></i>
+                        <span>Хрустальные пустоши</span>
+                    </div>
+                    <div class="image-caption">
+                        <h3>Хрустальные пустоши</h3>
+                        <p>Земли, пронизанные магическими кристаллами</p>
+                    </div>
+                </div>
+                <div class="gallery-image">
+                    <div class="image-placeholder cosmic-bg">
+                        <i class='bx bx-image-alt'></i>
+                        <span>Небесные острова</span>
+                    </div>
+                    <div class="image-caption">
+                        <h3>Небесные острова</h3>
+                        <p>Парящие в облаках обломки древнего мира</p>
+                    </div>
+                </div>
+                
+                <button class="gallery-nav gallery-prev cosmic-glow">
+                    <i class='bx bx-chevron-left'></i>
+                </button>
+                <button class="gallery-nav gallery-next cosmic-glow">
+                    <i class='bx bx-chevron-right'></i>
+                </button>
+            </div>
+
+            <!-- Миниатюры галереи -->
+            <div class="gallery-thumbnails">
+                <div class="thumbnail active cosmic-bg" data-index="0">
+                    <div class="thumb-placeholder">
+                        <i class='bx bx-image'></i>
+                    </div>
+                </div>
+                <div class="thumbnail cosmic-bg" data-index="1">
+                    <div class="thumb-placeholder">
+                        <i class='bx bx-image'></i>
+                    </div>
+                </div>
+                <div class="thumbnail cosmic-bg" data-index="2">
+                    <div class="thumb-placeholder">
+                        <i class='bx bx-image'></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Интерактивная информация -->
+		<!-- Интерактивная информация с пентограммой -->
+	<section class="info-section">
+	    <h2 class="section-title">Исследуйте Эпирион</h2>
+	    
+	    <div class="pentagram-container">
+		<!-- Пентограмма -->
+		<div class="pentagram">
+		    <div class="pentagram-line line-1"></div>
+		    <div class="pentagram-line line-2"></div>
+		    <div class="pentagram-line line-3"></div>
+		    <div class="pentagram-line line-4"></div>
+		    <div class="pentagram-line line-5"></div>
+		</div>
+		
+		<!-- Элементы пентограммы -->
+		<button class="pentagram-item top cosmic-glow" data-modal="history">
+		    <div class="pentagram-icon">
+		        <i class='bx bx-time'></i>
+		    </div>
+		    <span>История</span>
+		</button>
+		
+		<button class="pentagram-item top-right cosmic-glow" data-modal="peoples">
+		    <div class="pentagram-icon">
+		        <i class='bx bx-group'></i>
+		    </div>
+		    <span>Народы</span>
+		</button>
+		
+		<button class="pentagram-item bottom-right cosmic-glow" data-modal="gods">
+		    <div class="pentagram-icon">
+		        <i class='bx bx-planet'></i>
+		    </div>
+		    <span>Божества</span>
+		</button>
+		
+		<button class="pentagram-item bottom-left cosmic-glow" data-modal="continents">
+		    <div class="pentagram-icon">
+		        <i class='bx bx-map'></i>
+		    </div>
+		    <span>Континенты</span>
+		</button>
+		
+		<button class="pentagram-item top-left cosmic-glow" data-modal="magic">
+		    <div class="pentagram-icon">
+		        <i class='bx bx-magic-wand'></i>
+		    </div>
+		    <span>Магия</span>
+		</button>
+		
+		<!-- Центральный элемент -->
+		<div class="pentagram-center cosmic-glow">
+		    <i class='bx bx-star'></i>
+		    <span>Эпирион</span>
+		</div>
+	    </div>
+	</section>
+
+	<!-- Модальные окна -->
+	<div class="modal-overlay" id="modalOverlay"></div>
+
+	<!-- Модальное окно История -->
+	<div class="modal cosmic-bg" id="modalHistory">
+	    <button class="modal-close">
+		<i class='bx bx-x'></i>
+	    </button>
+	    <div class="modal-content">
+		<h3>Хронология Эпириона</h3>
+		<div class="modal-scroll">
+		    <div class="timeline-item cosmic-glow">
+		        <h4>Эпоха Сотворения</h4>
+		        <p>Рождение мира из космического хаоса, появление первых божеств и элементальных сил. В этот период сформировались основные законы магии и возникли первые формы жизни.</p>
+		    </div>
+		    <div class="timeline-item cosmic-glow">
+		        <h4>Век Древних</h4>
+		        <p>Расцвет древних рас, строительство первых городов и открытие основ магии. Цивилизации достигли невероятных высот в архитектуре и науке.</p>
+		    </div>
+		    <div class="timeline-item cosmic-glow">
+		        <h4>Война Раскола</h4>
+		        <p>Конфликт, разделивший континенты и изменивший ландшафт мира навсегда. Магические катастрофы привели к появлению новых земель и исчезновению старых.</p>
+		    </div>
+		</div>
+	    </div>
+	</div>
+
+	<!-- Модальное окно Народы -->
+	<div class="modal cosmic-bg" id="modalPeoples">
+	    <button class="modal-close">
+		<i class='bx bx-x'></i>
+	    </button>
+	    <div class="modal-content">
+		<h3>Народы Эпириона</h3>
+		<div class="modal-scroll">
+		    <div class="peoples-grid">
+		        <div class="people-card cosmic-glow">
+		            <h4>Аэтерийцы</h4>
+		            <p>Древняя раса, владеющая искусством воздушной магии и строительства. Их города парят в облаках, а технологии основаны на кристаллической энергии.</p>
+		        </div>
+		        <div class="people-card cosmic-glow">
+		            <h4>Кристаллиды</h4>
+		            <p>Существа из живой кристаллической породы, обитающие в глубинах земли. Обладают способностью управлять геомагией и создавать удивительные подземные города.</p>
+		        </div>
+		        <div class="people-card cosmic-glow">
+		            <h4>Сильваны</h4>
+		            <p>Лесной народ, живущий в гармонии с природой и древними духами. Их магия происходит от жизненной силы лесов и рек.</p>
+		        </div>
+		    </div>
+		</div>
+	    </div>
+	</div>
+
+	<!-- Модальное окно Божества -->
+	<div class="modal cosmic-bg" id="modalGods">
+	    <button class="modal-close">
+		<i class='bx bx-x'></i>
+	    </button>
+	    <div class="modal-content">
+		<h3>Пантеон Эпириона</h3>
+		<div class="modal-scroll">
+		    <div class="gods-list">
+		        <div class="god-card cosmic-glow">
+		            <h4>Аэлион</h4>
+		            <p>Бог небес и ветров, покровитель путешественников и исследователей. Его дыхание создает ураганы и наполняет паруса кораблей.</p>
+		        </div>
+		        <div class="god-card cosmic-glow">
+		            <h4>Террания</h4>
+		            <p>Богиня земли и плодородия, защитница природы и сельского хозяйства. Её слезы - это родники, а волосы - леса.</p>
+		        </div>
+		        <div class="god-card cosmic-glow">
+		            <h4>Игнис</h4>
+		            <p>Бог огня и ремесел, покровитель кузнецов и алхимиков. Его искры рождают новые звезды и вдохновляют на великие открытия.</p>
+		        </div>
+		    </div>
+		</div>
+	    </div>
+	</div>
+
+	<!-- Модальное окно Континенты -->
+	<div class="modal cosmic-bg" id="modalContinents">
+	    <button class="modal-close">
+		<i class='bx bx-x'></i>
+	    </button>
+	    <div class="modal-content">
+		<h3>Континенты мира</h3>
+		<div class="modal-scroll">
+		    <div class="continents-map cosmic-glow">
+		        <div class="map-placeholder">
+		            <i class='bx bx-map-alt'></i>
+		            <p>Эпирион состоит из пяти великих континентов, разделенных океанами магической энергии:</p>
+		            <ul>
+		                <li><strong>Аэтерия</strong> - центральный континент с парящими городами</li>
+		                <li><strong>Кристаллия</strong> - земли, пронизанные магическими кристаллами</li>
+		                <li><strong>Сильвания</strong> - бескрайние леса и древние рощи</li>
+		                <li><strong>Игнис</strong> - вулканические земли и огненные пустыни</li>
+		                <li><strong>Аквария</strong> - архипелаги и подводные цивилизации</li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+	    </div>
+	</div>
+
+	<!-- Модальное окно Магия -->
+	<div class="modal cosmic-bg" id="modalMagic">
+	    <button class="modal-close">
+		<i class='bx bx-x'></i>
+	    </button>
+	    <div class="modal-content">
+		<h3>Магическая система</h3>
+		<div class="modal-scroll">
+		    <div class="magic-system cosmic-glow">
+		        <div class="magic-placeholder">
+		            <i class='bx bx-planet'></i>
+		            <p>Магия в Эпирионе пронизывает каждую частицу бытия. Она делится на несколько школ:</p>
+		            <div class="magic-schools">
+		                <div class="school-item">
+		                    <h5>Элементальная магия</h5>
+		                    <p>Контроль над стихиями: огнем, водой, землей и воздухом</p>
+		                </div>
+		                <div class="school-item">
+		                    <h5>Космическая магия</h5>
+		                    <p>Работа с энергиями звезд и пространственными потоками</p>
+		                </div>
+		                <div class="school-item">
+		                    <h5>Техномагия</h5>
+		                    <p>Соединение магических энергий с механическими устройствами</p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	    </div>
+	</div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Условия использования</a>
+                <a href="#">Карта сайта</a>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://dnd.su" class="social-link cosmic-glow" target="_blank">
+                    <i class='bx bx-world'></i>
+                    dnd.su
+                </a>
+                <a href="https://discord.gg/your-server" class="social-link cosmic-glow" target="_blank">
+                    <i class='bx bxl-discord-alt'></i>
+                    Discord
+                </a>
+                <a href="#" class="social-link cosmic-glow">
+                    <i class='bx bxl-vk'></i>
+                    VK
+                </a>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2024 Эпирион. Все права защищены.</p>
+                <p>Мир создан для настольной ролевой игры Dungeons & Dragons</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/world.js"></script>	
+
+</body>
+</html>
