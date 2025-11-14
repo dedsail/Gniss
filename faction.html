@@ -3,142 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мир Аутерии | Эпирион</title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>Мир Аутерии | Гнисс</title>
+    <link href="css/faction.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body class="body-background">
     <header class="header-custom-hood">
-              <!-- Навигационная панель -->
-	    <nav class="nav-container">
-	    
-		<a href="hmpage.html" class="nav-item home-icon" data-target="home">
-		    <i class='bx bx-home-alt'></i>
-		</a>
-		
-		<a href="world.html" class="nav-item active" data-target="world">
-		    <span>Мир</span>
-		</a>
-		<a href="faction.html" class="nav-item" data-target="factions">
-		    <span>Фракции</span>
-		</a>
-		<a href="tech.html" class="nav-item" data-target="magic-tech">
-		    <span>Магия и технологии</span>
-		</a>
-		<a href="cosmology.html" class="nav-item" data-target="cosmology">
-		    <span>Космология</span>
-		</a>
-		<a href="tech.html" class="nav-item" data-target="other">
-		    <span>Прочее</span>
-		</a>
-	    </nav>
+        <nav class="nav-container">
+            <a href="hmpage.html" class="nav-item home-icon" data-target="home">
+                <i class='bx bx-home-alt'></i>
+            </a>
+            <a href="world.html" class="nav-item" data-target="world">
+                <span>Мир</span>
+            </a>
+            <a href="faction.html" class="nav-item" data-target="factions">
+                <span>Фракции</span>
+            </a>
+            <a href="tech.html" class="nav-item" data-target="magic-tech">
+                <span>Магия и технологии</span>
+            </a>
+            <a href="cosmology.html" class="nav-item" data-target="cosmology">
+                <span>Космология</span>
+            </a>
+            <a href="tech.html" class="nav-item" data-target="other">
+                <span>Прочее</span>
+            </a>
+        </nav>
     </header>
 
     <main class="main-content">
         <section class="content-section">
-            <h1 class="page-title">Материк Аутерия</h1>
+            <h1 class="page-title">Фракции Аутерия</h1>
             <div class="intro-text">
-                <p>Аутерия — величайший материк мира Гнисс, земля бескрайних возможностей, древних тайн и непрекращающихся конфликтов. Здесь переплетаются судьбы королевств, героев и богов.</p>
+                <p>Аутерия — крупнейший континент планеты Гнисс, омываемый четырьмя морями. Здесь расположены как дружелюбные, так и агрессивные фракции, каждая со своей уникальной историей и культурой.</p>
             </div>
 
-            <div class="kingdom-highlight">
-                <h2>Королевство Астмус</h2>
-                <p>Основанное в честь бога огня <strong>Астиуса</strong>, это королевство известно своей воинской культурой и несгибаемой волей. Правящая династия <strong>Нисгвильд</strong>, чья кровь течет в жилах короля Давида, ведет свое начало от легендарных героев Эпохи Раздора.</p>
-                
-                <div class="key-figures">
-                    <h3>Ключевые символы Астмуса:</h3>
-                    <ul>
-                        <li><strong>Правящий дом:</strong> Династия Нисгвильд</li>
-                        <li><strong>Государственная религия:</strong> Культа Астиуса, бога огня и порядка</li>
-                        <li><strong>Столица:</strong> Игнис-Кроу, Город-Кузня</li>
-                        <li><strong>Главный ресурс:</strong> Вулканическая сталь и руда из горных шахт</li>
-                    </ul>
+            <!-- Сетка фракций -->
+            <div class="factions-grid">
+                <!-- Астмус -->
+                <div class="faction-card fire lawful" onclick="openFactionModal('astmus')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Королевство Астмус</h3>
+                        <span class="faction-type">Законное доброе</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Правящий дом:</span>
+                            <span class="info-value">Династия Нисгвильд</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Столица:</span>
+                            <span class="info-value">Красноречье</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Правитель:</span>
+                            <span class="info-value">Король Давид</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Главный ресурс:</span>
+                            <span class="info-value">Огненный металл</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Горная местность</span>
+                        <span class="feature-tag">Культ Астиуса</span>
+                        <span class="feature-tag">Неприступность</span>
+                    </div>
+                </div>
+
+                <!-- Высшие эльфы -->
+                <div class="faction-card nature neutral-good" onclick="openFactionModal('high-elves')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Высшие эльфы</h3>
+                        <span class="faction-type">Нейтральное доброе</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Локация:</span>
+                            <span class="info-value">Глубины леса</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Особенность:</span>
+                            <span class="info-value">Дипломатия</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Ресурс:</span>
+                            <span class="info-value">Древние знания</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Магия природы</span>
+                        <span class="feature-tag">Долгожители</span>
+                        <span class="feature-tag">Мудрость</span>
+                    </div>
+                </div>
+
+                <!-- Кошколюди -->
+                <div class="faction-card shadow chaotic-neutral" onclick="openFactionModal('catfolk')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Кошколюди</h3>
+                        <span class="faction-type">Хаотичное нейтральное</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Локация:</span>
+                            <span class="info-value">Опушки леса</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Образ жизни:</span>
+                            <span class="info-value">Кочевой</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Особенность:</span>
+                            <span class="info-value">Ловкость</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Скрытность</span>
+                        <span class="feature-tag">Скорость</span>
+                        <span class="feature-tag">Охотники</span>
+                    </div>
+                </div>
+
+                <!-- Королевство Лан -->
+                <div class="faction-card trade true-neutral" onclick="openFactionModal('lan-kingdom')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Королевство Лан</h3>
+                        <span class="faction-type">Нейтральное</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Правление:</span>
+                            <span class="info-value">Парламент</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Расположение:</span>
+                            <span class="info-value">Восточная граница леса</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Население:</span>
+                            <span class="info-value">Полулюди</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Торговля</span>
+                        <span class="feature-tag">Многорасовая</span>
+                        <span class="feature-tag">Парламент</span>
+                    </div>
+                </div>
+
+                <!-- Вудос -->
+                <div class="faction-card war lawful-evil" onclick="openFactionModal('wudos')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Королевство Вудос</h3>
+                        <span class="faction-type">Законное злое</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Расположение:</span>
+                            <span class="info-value">Юго-западные равнины</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Статус:</span>
+                            <span class="info-value">Бывший морской удел</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Политика:</span>
+                            <span class="info-value">Агрессивная</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Интриги</span>
+                        <span class="feature-tag">Захват власти</span>
+                        <span class="feature-tag">Канклавы</span>
+                    </div>
+                </div>
+
+                <!-- Торговое объединение -->
+                <div class="faction-card trade neutral" onclick="openFactionModal('trade-alliance')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Торговое объединение</h3>
+                        <span class="faction-type">Нейтральное</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Расположение:</span>
+                            <span class="info-value">Юго-восток, берег моря Ксан</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Союзники:</span>
+                            <span class="info-value">Клан Омаж</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Статус:</span>
+                            <span class="info-value">Самое богатое</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Торговля</span>
+                        <span class="feature-tag">Богатство</span>
+                        <span class="feature-tag">Влияние</span>
+                    </div>
+                </div>
+
+                <!-- Гильян -->
+                <div class="faction-card water lawful-neutral" onclick="openFactionModal('gilian')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Королевство Гильян</h3>
+                        <span class="faction-type">Законное нейтральное</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Расположение:</span>
+                            <span class="info-value">Южные моря</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Характер:</span>
+                            <span class="info-value">Военизированное</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Флот:</span>
+                            <span class="info-value">Мощный</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Морское</span>
+                        <span class="feature-tag">Дисциплина</span>
+                        <span class="feature-tag">Торговые пути</span>
+                    </div>
+                </div>
+
+                <!-- Шронтмир -->
+                <div class="faction-card earth neutral" onclick="openFactionModal('shrontmir')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Королевство Шронтмир</h3>
+                        <span class="faction-type">Нейтральное</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Расположение:</span>
+                            <span class="info-value">Южные земли</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Происхождение:</span>
+                            <span class="info-value">Наследник империи</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Экономика:</span>
+                            <span class="info-value">Стабильная</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Земледелие</span>
+                        <span class="feature-tag">Традиции</span>
+                        <span class="feature-tag">Наследие</span>
+                    </div>
+                </div>
+
+                <!-- Заккай -->
+                <div class="faction-card arcane chaotic-neutral" onclick="openFactionModal('zakkai')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Королевство Заккай</h3>
+                        <span class="faction-type">Хаотичное нейтральное</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Расположение:</span>
+                            <span class="info-value">Южные острова</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Особенность:</span>
+                            <span class="info-value">Магическое</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Культура:</span>
+                            <span class="info-value">Свободолюбивая</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Магия</span>
+                        <span class="feature-tag">Свобода</span>
+                        <span class="feature-tag">Исследования</span>
+                    </div>
+                </div>
+
+                <!-- Лесные гномы -->
+                <div class="faction-card nature lawful-good" onclick="openFactionModal('forest-gnomes')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Лесные гномы</h3>
+                        <span class="faction-type">Законное доброе</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Локация:</span>
+                            <span class="info-value">Подземелья леса</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Ремесло:</span>
+                            <span class="info-value">Кузнечное дело</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Особенность:</span>
+                            <span class="info-value">Изобретательность</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Ремесло</span>
+                        <span class="feature-tag">Подземные города</span>
+                        <span class="feature-tag">Механика</span>
+                    </div>
+                </div>
+
+                <!-- Друиды леса -->
+                <div class="faction-card nature neutral-good" onclick="openFactionModal('druids')">
+                    <div class="faction-header">
+                        <h3 class="faction-title">Круг Друидов</h3>
+                        <span class="faction-type">Нейтральное доброе</span>
+                    </div>
+                    <div class="faction-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Локация:</span>
+                            <span class="info-value">Вокруг колодца маны</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Цель:</span>
+                            <span class="info-value">Защита природы</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Магия:</span>
+                            <span class="info-value">Природная</span>
+                        </div>
+                    </div>
+                    <div class="faction-features">
+                        <span class="feature-tag">Друиды</span>
+                        <span class="feature-tag">Защитники</span>
+                        <span class="feature-tag">Магия природы</span>
+                    </div>
                 </div>
             </div>
 
             <!-- Временная шкала -->
-            <h2 style="text-align: center; margin-top: 3rem;">Хронология Событий</h2>
-            <div class="timeline" id="mainTimeline">
-                
-                <div class="timeline-item left">
-                    <div class="timeline-content" onclick="openModal('modal1')">
-                        <div class="date">12 лет назад</div>
-                        <h3>Кровавый банкет</h3>
-                        <p>Во время празднования совершеннолетия наследного принца происходит вероломное нападение...</p>
+            <div class="timeline-section">
+                <h2 class="section-title">Хронология Событий</h2>
+                <div class="timeline" id="mainTimeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content" onclick="openModal('modal1')">
+                            <div class="date">12 лет назад</div>
+                            <h3>Переворот в Астмусе</h3>
+                            <p>Тайный план Вудоса приводит к мятежу и войне в королевстве Астмус...</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-content" onclick="openModal('modal2')">
-                        <div class="date">12-2 года назад</div>
-                        <h3>Гражданская война</h3>
-                        <p>Восстание, спровоцированное королевством Вудос, перерастает в полномасштабную войну...</p>
+                    <div class="timeline-item right">
+                        <div class="timeline-content" onclick="openModal('modal2')">
+                            <div class="date">12-2 года назад</div>
+                            <h3>Война и потери</h3>
+                            <p>Наследный принц Астмуса погибает, принцесса исчезает, война продолжается...</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-content" onclick="openModal('modal3')">
-                        <div class="date">2 года назад</div>
-                        <h3>Конец войны</h3>
-                        <p>После десяти лет кровопролития королю Давиду удается одержать победу...</p>
+                    <div class="timeline-item left">
+                        <div class="timeline-content" onclick="openModal('modal3')">
+                            <div class="date">2 года назад</div>
+                            <h3>Конец войны</h3>
+                            <p>После серьезных потерь королю Давиду удается остановить войну...</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-content" onclick="openModal('modal4')">
-                        <div class="date">Настоящее время</div>
-                        <h3>Новая эра</h3>
-                        <p>События первой сессии разворачиваются в период хрупкого мира и восстановления...</p>
+                    <div class="timeline-item right">
+                        <div class="timeline-content" onclick="openModal('modal4')">
+                            <div class="date">Настоящее время</div>
+                            <h3>Восстановление</h3>
+                            <p>Королевство Астмус восстанавливается и налаживает утерянные связи...</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Модальные окна для временной шкалы -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
-            <h2 class="modal-title">Кровавый банкет</h2>
-            <p><strong>12 лет назад</strong></p>
-            <p>Во время пышного банкета в честь совершеннолетия наследного принца заговорщики, подстрекаемые королевством Вудос, совершают вероломное нападение прямо в королевском зале.</p>
-            <p>Наследный принц героически погибает, защищая свою семью и дворян. Король Давид теряет руку в яростной схватке, а принцесса Дерия таинственным образом исчезает с места побоища, оставив после себя лишь пятна крови.</p>
-            <p>Этот день навсегда останется в памяти жителей Астмуса как "Ночь Алых Лент".</p>
-        </div>
-    </div>
-
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
-            <h2 class="modal-title">Десятилетие Огня и Крови</h2>
-            <p><strong>12-2 года назад</strong></p>
-            <p>Восстание, начавшееся с банкета, перерастает в полномасштабную гражданскую войну. Королевство Вудос, до этого считавшееся мелким и незначительным, выходит из тени и атакует Астмус с неожиданной силой.</p>
-            <p>Несмотря на превосходство в численности, армия Вудоса страдает от внутренних раздоров и действий шпионов Астмуса. Король Давид лично возглавляет войска, объезжая фронты и вдохновляя солдат.</p>
-            <p>Именно в этот период на полях сражений появляется загадочный воин по имени Лир, чье лицо всегда скрыто, а тактика и отвага становятся легендарными.</p>
-        </div>
-    </div>
-
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('modal3')">&times;</span>
-            <h2 class="modal-title">Победа и Цена</h2>
-            <p><strong>2 года назад</strong></p>
-            <p>После десяти лет изнурительной войны королю Давиду удается одержать решающую победу. Благодаря сочетанию военного гения, помощи храма Астиуса и героизма таких фигур как Безымянный Воин, угроза со стороны Вудоса окончательно устранена.</p>
-            <p>Цена победы оказалась страшной: тысячи погибших, разрушенные города, пропавшая принцесса и погибший наследник. В награду за невероятные заслуги, Безымянный Воин (Лир) получает титул герцога и земли, чтобы восстановить угасший знатный род.</p>
-            <p>Королевство начинает долгий и трудный процесс восстановления.</p>
-        </div>
-    </div>
-
-    <div id="modal4" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('modal4')">&times;</span>
-            <h2 class="modal-title">Хрупкий мир</h2>
-            <p><strong>Настоящее время</strong></p>
-            <p>Прошло два года с момента окончания войны. Королевство Астмус медленно залечивает раны, но под поверхностью кипят старые и новые конфликты.</p>
-            <p>Храм Астиуса укрепляет свое влияние, знать делит власть, а загадочный герцог д'Айвингард управляет своими землями, никогда не показывая лица.</p>
-            <p>Именно в этот период хрупкого равновесия и начинаются события нашей истории. Игроки окажутся в эпицентре интриг, которые могут либо спасти королевство, либо окончательно разорвать его на части.</p>
-        </div>
-    </div>
+    <!-- Футер -->
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-links">
@@ -163,11 +404,39 @@
             </div>
             
             <div class="footer-copyright">
-                <p>&copy; 2024 Эпирион. Все права защищены.</p>
+                <p>&copy; 2025 Гнисс. Все права защищены.</p>
                 <p>Мир создан для настольной ролевой игры Dungeons & Dragons</p>
             </div>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
+    <script>
+        // Функции для модальных окон
+        function openFactionModal(modalId) {
+            // Здесь будет логика открытия модального окна с детальной информацией
+            console.log('Открыть модальное окно для:', modalId);
+        }
+
+        function addNewFaction() {
+            // Логика добавления новой фракции
+            console.log('Добавить новую фракцию');
+        }
+
+        // Анимация появления элементов
+        function checkTimelineVisibility() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (itemTop < windowHeight - 100) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('load', checkTimelineVisibility);
+        window.addEventListener('scroll', checkTimelineVisibility);
+    </script>
 </body>
 </html>
