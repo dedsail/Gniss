@@ -1,5 +1,14 @@
 // Основной модуль навигации
 const Navigation = (function() {
+    const routeMap = {
+    	'home': '#home',
+        'world': '#world',
+        'factions': '#factions', 
+        'magic-tech': '#magic-tech',
+        'cosmology': '#cosmology',
+        'other': '#other'
+    };
+    
     // Приватные методы
     function handleNavClick(e) {
         e.preventDefault();
@@ -23,46 +32,52 @@ const Navigation = (function() {
     function handlePageTransition(target) {
         console.log('Переход к разделу:', target);
         
-        if (target == 'home') {
-            window.location.href = 'hmpage.html';
-            return;
+        const pageMap = {
+            'home': 'hmpage.html',
+            'world': 'world.html',
+            'factions': 'faction.html',
+            'magic-tech': 'tech.html',
+            'cosmology': 'cosmology.html',
+            'other': 'other.html'
+        };
+        
+        if (pageMap[target] && pageMap[target] !== getCurrentPage()) {
+            window.location.href = pageMap[target];
         }
+    }
+    
+    function getCurrentPage() {
+        return window.location.pathname.split('/').pop();
+    }
+    
+    function setActiveNavBasedOnPage() {
+        const currentPage = getCurrentPage();
+        const pageToTargetMap = {
+            'hmpage.html': 'home',
+            'world.html': 'world',
+            'faction.html': 'factions',
+            'tech.html': 'magic-tech',
+            'cosmology.html': 'cosmology',
+            'other.html': 'other',
+            '': 'home',
+            '/': 'home'
+        };
         
-        if (target == 'world') {
-            window.location.href = 'world.html';
-            return;
-        }
+        const target = pageToTargetMap[currentPage] || 'home';
+        const navItems = document.querySelectorAll('.nav-item');
         
-        if (target == 'factions') {
-            window.location.href = 'faction.html';
-            return;
-        }
-        
-        if (target == 'magic-tech') {
-            window.location.href = 'tech.html';
-            return;
-        }
-        
-        if (target == 'cosmology') {
-            window.location.href = 'cosmology.html';
-            return;
-        }
-        
-        if (target == 'other') {
-            window.location.href = 'other.html';
-            return;
-        }
-        
-        
-        // Обновляем контент
-        updateContent(target);
-        
-        // Можно добавить смену URL без перезагрузки страницы
-        // history.pushState(null, null, `#${target}`);
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('data-target') === target) {
+                item.classList.add('active');
+            }
+        });
     }
     
     function updateContent(section) {
         const contentDiv = document.querySelector('.content');
+        if (!contentDiv) return;
+        
         const sections = {
             home: {
                 title: 'Главная страница',
@@ -97,6 +112,7 @@ const Navigation = (function() {
         allNavItems.forEach(item => {
             if (item !== e.currentTarget) {
                 item.style.borderRightColor = 'transparent';
+                item.style.borderLeftColor = 'transparent';
             }
         });
     }
@@ -106,7 +122,10 @@ const Navigation = (function() {
         const allNavItems = document.querySelectorAll('.nav-item');
         allNavItems.forEach((item, index) => {
             if (index < allNavItems.length - 1) {
-                item.style.borderRightColor = '#e9ecef';
+                item.style.borderRightColor = default;
+            }
+            if (index > 0) {
+            	item.style.borderLeftColor = 'rgba(186, 85, 211, 0.2)';
             }
         });
     }
@@ -125,13 +144,14 @@ const Navigation = (function() {
                 item.addEventListener('mouseleave', handleNavLeave);
             });
             
-            // Инициализируем начальный контент (без активного элемента)
-            updateContent('home');
+            // Устанавливаем активный элемент на основе текущей страницы
+            setActiveNavBasedOnPage();
             
-            console.log('Навигация инициализирована!');
+            console.log('Навигация инициализирована! Текущая страница:', getCurrentPage());
         },
         
-        handlePageTransition: handlePageTransition
+        handlePageTransition: handlePageTransition,
+        setActiveNavBasedOnPage: setActiveNavBasedOnPage
     };
 })();
 
