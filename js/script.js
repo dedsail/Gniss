@@ -122,7 +122,7 @@ const Navigation = (function() {
         const allNavItems = document.querySelectorAll('.nav-item');
         allNavItems.forEach((item, index) => {
             if (index < allNavItems.length - 1) {
-                item.style.borderRightColor = default;
+                item.style.borderRightColor = 'rgba(186, 85, 211, 0.2)';
             }
             if (index > 0) {
             	item.style.borderLeftColor = 'rgba(186, 85, 211, 0.2)';
